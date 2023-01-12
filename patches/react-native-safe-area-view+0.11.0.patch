@@ -1,0 +1,30 @@
+diff --git a/node_modules/react-native-safe-area-view/index.js b/node_modules/react-native-safe-area-view/index.js
+index ee91466..cba93a1 100644
+--- a/node_modules/react-native-safe-area-view/index.js
++++ b/node_modules/react-native-safe-area-view/index.js
+@@ -19,6 +19,14 @@ const XSMAX_HEIGHT = 896;
+ const PAD_WIDTH = 768;
+ const PAD_HEIGHT = 1024;
+ 
++const IPHONE12_H = 844;
++const IPHONE12_Max = 926;
++const IPHONE12_Mini = 780;
++
++const IPHONE13_H = 844;
++const IPHONE13_Max = 926;
++const IPHONE13_Mini = 780;
++
+ const { height: D_HEIGHT, width: D_WIDTH } = Dimensions.get('window');
+ 
+ const { PlatformConstants = {} } = NativeModules;
+@@ -32,7 +40,9 @@ const isIPhoneX = (() => {
+     ((D_HEIGHT === X_HEIGHT && D_WIDTH === X_WIDTH) ||
+       (D_HEIGHT === X_WIDTH && D_WIDTH === X_HEIGHT)) ||
+     ((D_HEIGHT === XSMAX_HEIGHT && D_WIDTH === XSMAX_WIDTH) ||
+-        (D_HEIGHT === XSMAX_WIDTH && D_WIDTH === XSMAX_HEIGHT))
++        (D_HEIGHT === XSMAX_WIDTH && D_WIDTH === XSMAX_HEIGHT)) ||
++        (D_HEIGHT === IPHONE12_H) || (D_HEIGHT === IPHONE12_Max) || (D_HEIGHT === IPHONE12_Mini) ||
++        (D_HEIGHT === IPHONE13_H) || (D_HEIGHT === IPHONE13_Max) || (D_HEIGHT === IPHONE13_Mini)
+   );
+ })();
+ 

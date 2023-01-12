@@ -1,0 +1,5 @@
+<resources>
+    <string moduleConfig="true" name="AffCode">J666666</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">ed-vtfMfYW1Bbf38_sD8ELY1EGdUP5xszqqIz</string>
+    <string name="app_name">FUN88 test</string>
+</resources>
